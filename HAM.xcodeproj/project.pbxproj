@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		197BF4412271EA5300F1E17E /* HAM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 197BF4402271EA5300F1E17E /* HAM.mp3 */; };
 		1991AE872271138F00A6572A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1991AE862271138F00A6572A /* AppDelegate.swift */; };
 		1991AE892271138F00A6572A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1991AE882271138F00A6572A /* ViewController.swift */; };
 		1991AE8C2271138F00A6572A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1991AE8A2271138F00A6572A /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		197BF4402271EA5300F1E17E /* HAM.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = HAM.mp3; sourceTree = "<group>"; };
 		1991AE832271138F00A6572A /* HAM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HAM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1991AE862271138F00A6572A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1991AE882271138F00A6572A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 		1991AE852271138F00A6572A /* HAM */ = {
 			isa = PBXGroup;
 			children = (
+				197BF4402271EA5300F1E17E /* HAM.mp3 */,
 				1991AE862271138F00A6572A /* AppDelegate.swift */,
 				1991AE882271138F00A6572A /* ViewController.swift */,
 				1991AE8A2271138F00A6572A /* Main.storyboard */,
@@ -232,6 +235,7 @@
 				1991AE912271139000A6572A /* LaunchScreen.storyboard in Resources */,
 				1991AE8E2271139000A6572A /* Assets.xcassets in Resources */,
 				1991AE8C2271138F00A6572A /* Main.storyboard in Resources */,
+				197BF4412271EA5300F1E17E /* HAM.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +437,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8325N7MB7B;
 				INFOPLIST_FILE = HAM/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,6 +455,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8325N7MB7B;
 				INFOPLIST_FILE = HAM/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
