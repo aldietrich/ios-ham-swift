@@ -18,23 +18,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5Q-57-qfH">
-                                <rect key="frame" x="190" y="433" width="34" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTD-0a-5pd">
+                                <rect key="frame" x="41" y="57" width="336" height="765"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" updatesFrequently="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
                                 <state key="normal" title="HAM"/>
                                 <connections>
-                                    <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="INx-BK-y4S"/>
+                                    <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q2y-KR-HOH"/>
+                                    <outletCollection property="gestureRecognizers" destination="Qea-gj-Y9y" appends="YES" id="lGE-Jd-jWn"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="P5Q-57-qfH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="07V-eZ-Sq3"/>
-                            <constraint firstItem="P5Q-57-qfH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Uya-kS-cv0"/>
+                            <constraint firstItem="tTD-0a-5pd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="41" id="GCc-e9-vV6"/>
+                            <constraint firstItem="tTD-0a-5pd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="13" id="O53-Lp-fZz"/>
+                            <constraint firstItem="tTD-0a-5pd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-8.5" id="QWU-Vh-dTD"/>
+                            <constraint firstItem="tTD-0a-5pd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="2" id="zlX-Tf-vi5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="handleGesture" destination="Qea-gj-Y9y" id="dlC-vt-abk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="Qea-gj-Y9y">
+                    <connections>
+                        <outlet property="delegate" destination="tTD-0a-5pd" id="UBm-nS-PTC"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="76.811594202898561" y="20.758928571428569"/>
         </scene>
