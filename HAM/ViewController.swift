@@ -9,6 +9,8 @@
 import UIKit
 import AVFoundation
 
+var number = 0
+
 class GSAudio: NSObject, AVAudioPlayerDelegate {
 
     static let sharedInstance = GSAudio()
@@ -94,18 +96,33 @@ class GSAudio: NSObject, AVAudioPlayerDelegate {
 
 class ViewController: UIViewController {
     @IBOutlet var handleGesture: UILongPressGestureRecognizer!
-    
-    var audioPlayer = AVAudioPlayer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let defaults = UserDefaults.standard
+        let token = defaults.string(forKey: "number")
+        
+        counter.text = token
 
     }
 
     @IBAction func play(_ sender: Any) {
+        
+        let defaults = UserDefaults.standard
+        var token = defaults.integer(forKey: "number")
+       
+        token+=1
+        
+        defaults.set(token, forKey: "number")
+        
+        counter.text = String(token)
+
         GSAudio.sharedInstance.playSound(soundFileName: "HAM")
     }
+    @IBOutlet weak var counter: UILabel!
+    
+    
     @IBAction func handleGesture(_ sender: UILongPressGestureRecognizer) {
         if sender.state == .began
         {

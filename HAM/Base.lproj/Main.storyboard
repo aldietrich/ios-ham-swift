@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,13 +11,25 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="Qea-gj-Y9y">
+                    <connections>
+                        <outlet property="delegate" destination="tTD-0a-5pd" id="UBm-nS-PTC"/>
+                    </connections>
+                </pongPressGestureRecognizer>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HAM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tkg-ni-VkW">
+                                <rect key="frame" x="154" y="654" width="106" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTD-0a-5pd">
-                                <rect key="frame" x="41" y="57" width="336" height="765"/>
+                                <rect key="frame" x="40" y="133" width="334" height="448"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES" updatesFrequently="YES"/>
                                 </accessibility>
@@ -34,23 +44,21 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="tTD-0a-5pd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="41" id="GCc-e9-vV6"/>
-                            <constraint firstItem="tTD-0a-5pd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="13" id="O53-Lp-fZz"/>
-                            <constraint firstItem="tTD-0a-5pd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-8.5" id="QWU-Vh-dTD"/>
-                            <constraint firstItem="tTD-0a-5pd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="2" id="zlX-Tf-vi5"/>
+                            <constraint firstItem="tTD-0a-5pd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="0wV-7V-nGp"/>
+                            <constraint firstItem="tkg-ni-VkW" firstAttribute="top" secondItem="tTD-0a-5pd" secondAttribute="bottom" constant="73" id="91M-5M-phj"/>
+                            <constraint firstItem="tTD-0a-5pd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="89" id="CuF-hg-kmB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tkg-ni-VkW" secondAttribute="bottom" constant="187" id="Ufi-JV-m04"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tkg-ni-VkW" secondAttribute="trailing" constant="154" id="dO0-ot-9SN"/>
+                            <constraint firstItem="tkg-ni-VkW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="154" id="dnY-dK-Ist"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tTD-0a-5pd" secondAttribute="trailing" constant="40" id="xPw-Cw-F5P"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="counter" destination="tkg-ni-VkW" id="vD9-rh-yAn"/>
                         <outlet property="handleGesture" destination="Qea-gj-Y9y" id="dlC-vt-abk"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="Qea-gj-Y9y">
-                    <connections>
-                        <outlet property="delegate" destination="tTD-0a-5pd" id="UBm-nS-PTC"/>
-                    </connections>
-                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="76.811594202898561" y="20.758928571428569"/>
         </scene>
